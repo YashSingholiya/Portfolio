@@ -157,22 +157,22 @@ svg {
 .header{
     position: fixed;
     width: 100%;
-    background-color : var( --container-color); 
+    background-color : var(--container-color); 
     top: 0;
     left: 0;
-    z-index: var( --z-fixed);
+    z-index: var(--z-fixed);
 }
 
 .nav{
-    height: var( --header-height);
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav__logo{
-    color: var( --title-color);
-    font-weight: var( --font-medium);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
 }
 
 .nav__logo span{
@@ -192,7 +192,7 @@ svg {
 .nav__menu{
     position: fixed;
     top: 0;
-    right: -100;
+    right: -100%;
     background-color: hsla(0, 0%, 10%, .3);
     width: 75%;
     height: 100%;
@@ -210,13 +210,13 @@ row-gap: 3rem;
 }
 
 .nav__link{
-color: var( --title-color);
-font-weight: var( --font-medium);
+color: var(--title-color);
+font-weight: var(--font-medium);
 transition: color .4s;
 }
 
 .nav__link:hover{
-color: var( --first-color) ;
+color: var(--first-color) ;
 }
 
 .nav__close{
@@ -226,7 +226,9 @@ color: var( --first-color) ;
 }
 
 /* Show menu */
-
+.show-menu{
+  right: 0;
+}
 
 /* Add blur to header */
 
