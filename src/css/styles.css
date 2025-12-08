@@ -370,10 +370,55 @@ color: var(--first-color) ;
 }
 
 /*=============== SKILLS ===============*/
+.skills{
+  background-color: var(--container-color);
+}
 
+.skills__container{
+  padding-bottom: 2rem;
+  row-gap: 3.5rem;
+}
 
-/*=============== SERVICES ===============*/
+.skills__data{
+  text-align: center;
+}
 
+.skills__description{
+  margin-bottom: 2rem;
+}
+
+.skills__content,
+.skills__group{
+  display: grid;
+}
+
+.skills__content{
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 4rem;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.skills__group{
+  row-gap: 1rem;
+  list-style: decimal-leading-zero;
+}
+
+.skills__item{
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  display: flex;
+  align-items: center;
+  column-gap: 1rem; 
+}
+
+.skills__item::marker{
+  color: var(--first-color);
+}
+
+.skills__item i{
+  font-size: 2.5rem;      /* icon size */
+}
 
 /*=============== PROJECTS ===============*/
 
