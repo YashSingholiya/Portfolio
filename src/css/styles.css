@@ -792,7 +792,7 @@ transform: translateY( -.25rem);
     margin-inline: auto;
   }
   .home__container{
-    grid-template-columns: 455px 550px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
     column-gap: 7rem;
     padding-block: 2rem 3rem;
   }
