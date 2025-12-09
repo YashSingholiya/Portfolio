@@ -30,3 +30,26 @@ const blurHeader = () =>{
                        : header.classList.remove('blur-header')
 }
 window.addEventListener('scroll', blurHeader)
+
+const contactForm = document.getElementById('contact-form'),
+contactMessage = document.getElementById('contact-message')
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    // serviceID - templateID - #form - publickey
+    emailjs.sendForm('service_tt017pv', 'template_w119izl', '#contact-form','68KQJd8VUuMFoHB3u')
+        .then(() =>{
+            contactMessage.textContent = 'Message sent successfully ✅'
+
+            setTimeout(() =>{
+                contactMessage.textContent = ''
+            }, 1500)
+
+            contactForm.reset()
+
+        }, () =>{
+            contactMessage.textContent = 'Message not sent (service error) ❌'
+        })
+}
+contactForm.addEventListener('submit' , sendEmail)
+
