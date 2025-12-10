@@ -128,24 +128,15 @@ svg {
   padding-block: 5rem 2rem;
 }
 
-.section__title, 
-.section__subtitle {
+.section__title{
   text-align: center;
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-}
-
-.section__title {
   font-size: var(--h1-font-size);
   margin-bottom: 1.5rem;
 }
 
-.section__subtitle {
-  font-size: var(--small-font-size);
-  margin-bottom: .25rem;
-}
-
-.section__subtitle span {
+.section__title span {
   color: var(--first-color);
 }
 
@@ -761,7 +752,7 @@ transform: translateY( -.25rem);
   .home__data,
   .about__data,
   .skills__data
-  :is(.about__data, .skills__data) :is(.section__subtitle, .section__title) {
+  :is(.about__data, .skills__data) :is(.section__title) {
     text-align: initial;
   }
 
@@ -788,10 +779,6 @@ transform: translateY( -.25rem);
 @media screen and (min-width: 1023px) {
   .section{
     padding-block: 7rem 2rem;
-  }
-
-  .section__subtitle{
-    font-size: var( --normal-font-size);
   }
 
   .nav{
