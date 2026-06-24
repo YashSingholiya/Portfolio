@@ -1,538 +1,493 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
+   <!--=============== SEO ===============-->
+   <title>Yash Singholiya | Software Engineer & Android Developer</title>
+   <meta name="description" content="Yash Singholiya — 3rd year CSE student at IIT Jodhpur. Android Developer, Software Engineer and Full Stack Developer building scalable, real-world applications." />
+   <meta name="author" content="Yash Singholiya" />
+   <meta name="keywords" content="Yash Singholiya, IIT Jodhpur, Android Developer, Software Engineer, Full Stack Developer, React, Spring Boot, Kotlin, Portfolio" />
+   <meta name="theme-color" content="#0B0F19" />
 
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+   <!-- Open Graph / Social -->
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Yash Singholiya | Software Engineer & Android Developer" />
+   <meta property="og:description" content="3rd year CSE student at IIT Jodhpur. Building scalable Android, web and full-stack applications." />
+   <meta property="og:image" content="src/img/neww.png" />
+   <meta property="og:url" content="https://yashsingholiya.vercel.app/" />
+   <meta name="twitter:card" content="summary_large_image" />
 
-      <!--=============== DEVICON (Skill icons) ===============-->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+   <link rel="canonical" href="https://yashsingholiya.vercel.app/" />
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="src/css/styles.css">
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
 
-      <title>Yash Singholiya | Portfolio</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-               Yash <span>Singholiya</span>
-            </a>
-            <div class="nav__menu " id="nav-menu">
-               <ul class="nav__list">
-                  <li class="nav__item">
-                    <a href="#home" class="nav__link active-link">Home</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#about" class="nav__link">About</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#skills" class="nav__link">Skills</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#projects" class="nav__link">Projects</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#contact" class="nav__link">Contact</a>
-                  </li>
-               </ul>
+   <!--=============== PRECONNECT / FONTS ===============-->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-               <div class="nav__close" id="nav-close">
-                <i class="ri-close-line"></i>
+   <!--=============== ICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="src/css/styles.css" />
+</head>
+<body>
+   <!--==================== PRELOADER ====================-->
+   <div class="preloader" id="preloader">
+      <div class="preloader__logo">YS</div>
+      <div class="preloader__bar"><span></span></div>
+   </div>
+
+   <!--==================== CUSTOM CURSOR ====================-->
+   <div class="cursor-dot" id="cursor-dot"></div>
+   <div class="cursor-ring" id="cursor-ring"></div>
+
+   <!--==================== BACKGROUND LAYERS ====================-->
+   <canvas class="particles" id="particles"></canvas>
+   <div class="glow" id="glow"></div>
+
+   <!--==================== PROGRESS BAR ====================-->
+   <div class="scroll-progress" id="scroll-progress"></div>
+
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="#home" class="nav__logo">
+            <span class="nav__logo-badge">YS</span>
+            <span class="nav__logo-text">Yash Singholiya</span>
+         </a>
+
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+               <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+               <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+               <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+               <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+               <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
+         </div>
+
+         <div class="nav__actions">
+            <a href="src/Yash_Singholiya_Resume.pdf" download class="nav__resume">Resume</a>
+            <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-3-line"></i></div>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== HERO ====================-->
+      <section class="home section" id="home">
+         <div class="home__container container grid">
+            <div class="home__data" data-reveal="left">
+               <span class="home__badge"><span class="home__badge-dot"></span> Available for opportunities</span>
+               <h3 class="home__subtitle">Hi, I'm</h3>
+               <h1 class="home__title">Yash Singholiya</h1>
+               <h2 class="home__roles">
+                  <span class="home__typed" id="typed"></span><span class="home__caret">|</span>
+               </h2>
+               <p class="home__description">
+                  3rd year B.Tech CSE student at <strong>IIT Jodhpur</strong>. I build scalable
+                  Android apps, intuitive web interfaces and robust backends — turning real-world
+                  problems into clean, maintainable software.
+               </p>
+
+               <div class="home__buttons">
+                  <a href="src/Yash_Singholiya_Resume.pdf" download class="button">
+                     <i class="ri-download-2-line"></i> Download Resume
+                  </a>
+                  <a href="#contact" class="button button--ghost">
+                     <i class="ri-send-plane-line"></i> Contact Me
+                  </a>
+               </div>
+
+               <div class="home__social">
+                  <a href="https://github.com/YashSingholiya" target="_blank" rel="noopener" aria-label="GitHub" class="home__social-link"><i class="ri-github-fill"></i></a>
+                  <a href="https://linkedin.com/in/yashsingholiya12" target="_blank" rel="noopener" aria-label="LinkedIn" class="home__social-link"><i class="ri-linkedin-box-fill"></i></a>
+                  <a href="https://leetcode.com/u/YashSingholiya12/" target="_blank" rel="noopener" aria-label="LeetCode" class="home__social-link"><i class="ri-code-s-slash-line"></i></a>
+                  <a href="https://www.instagram.com/_yash1207/" target="_blank" rel="noopener" aria-label="Instagram" class="home__social-link"><i class="ri-instagram-line"></i></a>
                </div>
             </div>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-menu-line"></i>
+            <div class="home__visual" data-reveal="right">
+               <div class="home__image-glow"></div>
+               <div class="home__image card-spotlight">
+                  <img src="src/img/neww.png" alt="Yash Singholiya" class="home__img" />
+               </div>
+               <!-- Floating tech icons -->
+               <span class="float-icon float-icon--1"><i class="devicon-kotlin-plain colored"></i></span>
+               <span class="float-icon float-icon--2"><i class="devicon-react-original colored"></i></span>
+               <span class="float-icon float-icon--3"><i class="devicon-java-plain colored"></i></span>
+               <span class="float-icon float-icon--4"><i class="devicon-cplusplus-plain colored"></i></span>
             </div>
-         </nav>
-         
-      </header>
-
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content">
-                    <div class="home__data">
-                        <h3 class="home__subtitle">
-                            Hello, <span>I’m</span>
-                        </h3>
-
-                        <h1 class="home__title">Yash Singholiya</h1>
-
-                        <h3 class="home__education">Software Developer</h3>
-
-                        <p class="home__description">
-                            I specialize in full-stack development and software engineering, creating scalable backends and intuitive user interfaces with modern web technologies.
-                        </p>
-
-                        <a href="#contact" class="button">Let's Talk</a>
-                    </div>
-
-                    <div class="home__social">
-                        <a href="https://github.com/YashSingholiya" target="_blank" class="home__social-link">
-                            <i class="ri-github-fill"></i>
-                        </a>
-
-                        <a href="https://leetcode.com/u/YashSingholiya12/" target="_blank" class="home__social-link">
-                            <i class="ri-code-s-slash-line"></i>
-                        </a>
-
-                        <a href="https://linkedin.com/in/yashsingholiya12" target="_blank" class="home__social-link">
-                            <i class="ri-linkedin-box-fill"></i>
-                        </a>
-                    </div>         
-                </div>
-                <div class="home__image">
-                   <svg class="about__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="maskBorder" mask-type="alpha">
-                        <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
-                        171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
-                        448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
-                        270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
-                        439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black"/>
-                    </mask>
-                    <g mask="url(#maskBorder)">
-                        <rect x="37" width="476" height="630" fill="url(#pattern2)"/>
-                        
-                        <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
-                        192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
-                        580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
-                        40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
-                        175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10"/>
-                    </g>
-
-                    <rect x="37" width="476" height="300" fill="url(#pattern3)"/>
-
-                    <defs>
-                        <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
-                        </pattern>
-
-                        <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
-                        </pattern>
-
-                        <!-- Insert your profile (recommended size: 640 x 940) -->
-                        <image class="about__img" id="imageBorder" width="640" height="940" href="src/img/neww.png"/>
-                    </defs>
-                    </svg>
-                </div>
-            </div>
-         </section>
-
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            <div class="about__container conatainer grid">
-                <div class="about__data">
-                    <h2 class="section__title">
-                        About <span>Me</span>
-                    </h2>
-
-                    <p class="about__description">
-                        I’m Yash Singholiya, a Computer Science undergraduate at IIT Jodhpur with a passion for building scalable and meaningful software. While my academic foundation strengthens my understanding of computing systems, I’m driven by the creativity and precision of full-stack development. <br> <br>
-                        I enjoy working across the stack crafting intuitive user interfaces, designing efficient backend architectures, and building tools that solve real-world problems. Through projects at IITJ, I’ve worked on projects that combine solid engineering principles with clean and maintainable design.
-                    </p>
-
-                    <a href="#contact" class="button">Contact Me</a>
-                </div>
-
-                <div class="about__image">
-                    <svg class="about__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="maskBorder" mask-type="alpha">
-                        <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
-                        171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
-                        448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
-                        270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
-                        439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black"/>
-                    </mask>
-                    <g mask="url(#maskBorder)">
-                        <rect x="37" width="476" height="630" fill="url(#pattern2)"/>
-                        
-                        <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
-                        192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
-                        580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
-                        40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
-                        175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10"/>
-                    </g>
-
-                    <rect x="37" width="476" height="300" fill="url(#pattern3)"/>
-
-                    <defs>
-                        <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
-                        </pattern>
-
-                        <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
-                        </pattern>
-
-                        <!-- Insert your profile (recommended size: 640 x 940) -->
-                        <image class="about__img" id="imageBorder" width="640" height="940" href="src/img/neww.png"/>
-                    </defs>
-                    </svg>
-                </div>
-            </div>
-         </section>
-
-         <!--==================== SKILLS ====================-->
-        <section class="skills section" id="skills">
-            <div class="skills__container container grid">
-                <div class="skills__data">
-                <h2 class="section__title">
-                    My <span>Skills</span>
-                </h2>
-
-                <p class="skills__description">
-                    These are the primary technologies I work with for development, optimization, and problem solving.
-                </p>
-                </div>
-
-                <div class="skills__content">
-                    <ol class="skills__group">
-                        <li class="skills__item">
-                        <i class="devicon-html5-plain colored"></i>
-                        HTML
-                        </li>
-                        <li class="skills__item">
-                        <i class="devicon-javascript-plain colored"></i>
-                        JavaScript
-                        </li>
-                        <li class="skills__item">
-                        <i class="devicon-react-original colored"></i>
-                        React.js
-                        </li>
-                        <li class="skills__item">
-                        <i class="devicon-nodejs-plain colored"></i>
-                        Node.js
-                        </li>
-                    </ol>
-
-                    <ol class="skills__group" start="5">
-                        <li class="skills__item">
-                        <i class="devicon-express-original"></i>
-                        Express.js
-                        </li>
-                        <li class="skills__item">
-                        <i class="devicon-mongodb-plain colored"></i>
-                        MongoDB
-                        </li>
-                        <li class="skills__item">
-                        <i class="devicon-redis-plain colored"></i>
-                        Redis
-                        </li>
-                        <li class="skills__item">
-                        <i class="devicon-postgresql-plain colored"></i>
-                        PostgreSQL
-                        </li>
-                    </ol>
-
-                    <ol class="skills__group" start="9">
-                        <li class="skills__item">
-                        <i class="devicon-cplusplus-plain colored"></i>
-                        C++
-                        </li>
-
-                        <li class="skills__item">
-                        <i class="devicon-tailwindcss-plain colored"></i>
-                        Tailwind CSS
-                        </li>
-
-                        <li class="skills__item">
-                        <i class="devicon-python-plain colored"></i>
-                        Python
-                        </li>
-                        
-                        <li class="skills__item">
-                        <i class="devicon-git-plain colored"></i>
-                        Git
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-
-
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-           
-            <h2 class="section__title">
-                My <span>Projects</span>
-            </h2>
-
-            <div class="projects__container container grid">
-                <article class="projects__card">
-                    <div class="projects__img-wrapper">
-                        <img src="src/img/HackSprint.png" alt="HackSprint" class="projects__img">
-
-                        <div class="projects__overlay">
-                            <div class="projects__icons">
-                                <a href="https://github.com/YashSingholiya/HackSprint" target="_blank" class="projects__icon">
-                                    <i class="ri-github-fill"></i>
-                                </a>
-                                <a href="https://hack-sprint-iitj.vercel.app/" target="_blank" class="projects__icon">
-                                    <i class="ri-external-link-line"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="projects__content">
-                        <h3 class="projects__title">HackSprint</h3>
-                        <p class="projects__description">
-                           A challenge and hackathon platform for IIT Jodhpur with automated workflows, event dashboards, and optimized task processing.
-                        </p>
-
-                        <ul class="projects__tags">
-                            <li class="projects__tag">React</li>
-                            <li class="projects__tag">Node.js</li>
-                            <li class="projects__tag">MongoDB</li>
-                            <li class="projects__tag">Redis</li>
-                            <li class="projects__tag">Kestra</li>
-                        </ul>
-                    </div>
-                </article>
-
-
-                <article class="projects__card">
-                    <div class="projects__img-wrapper">
-                        <img src="src/img/Syntaxia.png" alt="Syntaxia Compiler" class="projects__img">
-
-                        <div class="projects__overlay">
-                            <div class="projects__icons">
-                                <a href="https://github.com/YashSingholiya/Syntaxia_Compiler" target="_blank" class="projects__icon">
-                                    <i class="ri-github-fill"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="projects__content">
-                        <h3 class="projects__title">Syntaxia Compiler</h3>
-                        <p class="projects__description">
-                            A multi-stage C++ compiler featuring lexical, syntax, and semantic analysis, along with automated token generation and RISC-V code emission.
-                        </p>
-
-                        <ul class="projects__tags">
-                            <li class="projects__tag">C++</li>
-                            <li class="projects__tag">HTML</li>
-                            <li class="projects__tag">CSS</li>
-                            <li class="projects__tag">JavaScript</li>
-                            <li class="projects__tag">Python</li>
-                        </ul>
-                    </div>
-                </article>
-
-
-                <article class="projects__card">
-                    <div class="projects__img-wrapper">
-                        <img src="src/img/Mail.png" alt="Mail Scheduler" class="projects__img">
-
-                        <div class="projects__overlay">
-                            <div class="projects__icons">
-                                <a href="https://github.com/YashSingholiya/Email-Scheduler-WOC" target="_blank" class="projects__icon">
-                                    <i class="ri-github-fill"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="projects__content">
-                        <h3 class="projects__title">Mail Scheduler</h3>
-                        <p class="projects__description">
-                            An automated email scheduling system designed for efficient communication, supported by a custom queue and a reliable backend.
-                        </p>
-
-                        <ul class="projects__tags">
-                            <li class="projects__tag">Spring Boot</li>
-                            <li class="projects__tag">React</li>
-                            <li class="projects__tag">PostgreSQL</li>
-                            <li class="projects__tag">Java</li>
-                        </ul>
-                    </div>
-                </article>
-
-
-                <article class="projects__card">
-                    <div class="projects__img-wrapper">
-                        <img src="src/img/Tree.png" alt="Binary Tree Visualizer" class="projects__img">
-
-                        <div class="projects__overlay">
-                            <div class="projects__icons">
-                                <a href="https://github.com/YashSingholiya/Binary_Tree_Visualizer" target="_blank" class="projects__icon">
-                                    <i class="ri-github-fill"></i>
-                                </a>
-                                <a href="https://binary-tree-visualizerr.vercel.app/" target="_blank" class="projects__icon">
-                                    <i class="ri-external-link-line"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="projects__content">
-                        <h3 class="projects__title">Binary Tree Visualizer</h3>
-                        <p class="projects__description">
-                            An interactive visualization tool for Binary, BST, AVL, and Red-Black Trees with smooth animations and user-friendly controls.
-                        </p>
-
-                        <ul class="projects__tags">
-                            <li class="projects__tag">HTML</li>
-                            <li class="projects__tag">CSS</li>
-                            <li class="projects__tag">JavaScript</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="projects__card">
-                    <div class="projects__img-wrapper">
-                        <img src="src/img/Portfolio.png" alt="Portfolio Website" class="projects__img">
-
-                        <div class="projects__overlay">
-                            <div class="projects__icons">
-                                <!-- GitHub -->
-                                <a href="https://github.com/YashSingholiya/Portfolio" target="_blank" class="projects__icon">
-                                    <i class="ri-github-fill"></i>
-                                </a>
-
-                                <!-- Live Demo -->
-                                <a href="https://yashsingholiya.vercel.app/" target="_blank" class="projects__icon">
-                                    <i class="ri-external-link-line"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="projects__content">
-                        <h3 class="projects__title">Portfolio Website</h3>
-                        <p class="projects__description">
-                            A modern and responsive portfolio website built to showcase my projects, skills and background, featuring smooth UI, animations and EmailJS-powered contact functionality.
-                        </p>
-
-                        <ul class="projects__tags">
-                            <li class="projects__tag">HTML</li>
-                            <li class="projects__tag">CSS</li>
-                            <li class="projects__tag">JavaScript</li>
-                            <li class="projects__tag">EmailJS</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="projects__card">
-                    <div class="projects__img-wrapper">
-                        <img src="src/img/stroke.jpg" alt="Stroke Prediction" class="projects__img">
-
-                        <div class="projects__overlay">
-                            <div class="projects__icons">
-                                <!-- GitHub -->
-                                <a href="https://github.com/YashSingholiya/Stroke_Prediction" target="_blank" class="projects__icon">
-                                    <i class="ri-github-fill"></i>
-                                </a>
-                                <!-- Live Demo or Report -->
-                                <a href="https://yashsingholiya.github.io/Project_Page/" target="_blank" class="projects__icon">
-                                    <i class="ri-external-link-line"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="projects__content">
-                        <h3 class="projects__title">Stroke Prediction</h3>
-                        <p class="projects__description">
-                            Implemented preprocessing, dimensionality reduction (PCA/LDA), and model evaluation to predict stroke risk from structured medical data using various machine learning classifiers.
-                        </p>
-
-                        <ul class="projects__tags">
-                            <li class="projects__tag">Python</li>
-                            <li class="projects__tag">Pandas</li>
-                            <li class="projects__tag">NumPy</li>
-                            <li class="projects__tag">Scikit-Learn</li>
-                            <li class="projects__tag">PCA</li>
-                            <li class="projects__tag">LDA</li>
-                        </ul>
-                    </div>
-                </article>
-
-            </div>
-         </section>
-
-         <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            <h2 class="section__title">
-                Contact <span>Me</span>
-            </h2>
-
-            <div class="contact__container containe grid">
-                <form action="" class="contact__form" id="contact-form">
-                    <div class="contact__group">
-                        <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
-                        <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
-                    </div>
-
-                    <textarea name="user_project" required placeholder="Enter your message" class="contact__input"></textarea>
-
-                    <p class="contact__message" id="contact-message"></p>
-
-                    <button type="submit" class="button contact__button">Send Message</button>
-                </form>
-            </div>
-         </section>
-      </main>
-
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         <div class="footer__container container grid">
-            <div>
-                <h1 class="footer__title">
-                    Yash <span>Singholiya</span>
-                </h1>
-
-                <h2 class="footer__education">
-                    Software Developer
-                </h2>
-            </div>
-
-            <div class="footer__social">
-                <a href="https://www.instagram.com/_yash1207/" target="_blank" class="footer__social-link">
-                    <i class="ri-instagram-line"></i>
-                </a>
-                <a href="https://linkedin.com/in/yashsingholiya12" target="_blank" class="footer__social-link">
-                    <i class="ri-linkedin-box-fill"></i>
-                </a>
-                <a href="https://github.com/YashSingholiya" target="_blank" class="footer__social-link">
-                    <i class="ri-github-fill"></i>
-                </a>
-                <a href="https://leetcode.com/u/YashSingholiya12/" target="_blank" class="footer__social-link">
-                    <i class="ri-code-s-slash-fill"></i>
-                </a>
-            </div>
-
-            <span class="footer__copy">
-                &#169; Copyright 2026 Yash Singholiya. All rights reserved.
-            </span>
          </div>
-      </footer>
 
-      <!--========== SCROLL UP ==========-->
-      <a href="#" class="scrollup" id="scroll-up">
-        <i class="ri-arrow-up-line"></i>
-      </a>
+         <a href="#about" class="home__scroll" aria-label="Scroll down">
+            <span class="home__mouse"><span class="home__wheel"></span></span>
+            <span class="home__scroll-text">Scroll</span>
+         </a>
+      </section>
 
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src="src/js/scrollreveal.min.js"></script>
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+         <h2 class="section__title" data-reveal><span class="section__num">01.</span> About <span class="grad">Me</span></h2>
+         <p class="section__subtitle" data-reveal>A quick look at who I am and what drives me.</p>
 
-      <!--=============== EMAIL JS ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+         <div class="about__container container grid">
+            <div class="about__intro card-glass card-spotlight" data-reveal="left">
+               <p class="about__description">
+                  I'm <strong>Yash Singholiya</strong>, a 3rd year B.Tech Computer Science &amp;
+                  Engineering student at <strong>IIT Jodhpur</strong>. I love crafting software that
+                  is both delightful to use and solid under the hood.
+               </p>
+               <p class="about__description">
+                  I'm passionate about building <strong>scalable applications</strong> and solving
+                  real-world problems — from polished mobile experiences to reliable backend systems.
+               </p>
+               <div class="about__tags">
+                  <span class="about__tag"><i class="ri-map-pin-line"></i> Jodhpur, India</span>
+                  <span class="about__tag"><i class="ri-graduation-cap-line"></i> IIT Jodhpur</span>
+                  <span class="about__tag"><i class="ri-briefcase-line"></i> Open to work</span>
+               </div>
+            </div>
 
-      <!--=============== MAIN JS ===============-->
-      <script src="src/js/main.js"></script>
-   </body>
+            <div class="about__cards">
+               <article class="about__card card-glass card-spotlight" data-reveal data-reveal-delay="0">
+                  <i class="ri-android-line about__icon"></i>
+                  <h3>Android Development</h3>
+                  <p>Native &amp; cross-platform apps with Kotlin, Java and React Native / Expo.</p>
+               </article>
+               <article class="about__card card-glass card-spotlight" data-reveal data-reveal-delay="80">
+                  <i class="ri-cloud-line about__icon"></i>
+                  <h3>Cloud Computing</h3>
+                  <p>Designing and deploying services that scale reliably in the cloud.</p>
+               </article>
+               <article class="about__card card-glass card-spotlight" data-reveal data-reveal-delay="160">
+                  <i class="ri-terminal-box-line about__icon"></i>
+                  <h3>DevOps</h3>
+                  <p>CI/CD, containerization and automation for smooth, repeatable releases.</p>
+               </article>
+               <article class="about__card card-glass card-spotlight" data-reveal data-reveal-delay="240">
+                  <i class="ri-stack-line about__icon"></i>
+                  <h3>Full Stack</h3>
+                  <p>End-to-end products — from React frontends to Spring Boot backends.</p>
+               </article>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== SKILLS ====================-->
+      <section class="skills section" id="skills">
+         <h2 class="section__title" data-reveal><span class="section__num">02.</span> Tech <span class="grad">Stack</span></h2>
+         <p class="section__subtitle" data-reveal>The tools and technologies I work with day to day.</p>
+
+         <div class="skills__container container">
+            <div class="skills__group card-glass card-spotlight" data-reveal="left">
+               <h3 class="skills__group-title"><i class="ri-code-s-slash-line"></i> Languages</h3>
+               <div class="skills__list">
+                  <span class="skill"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                  <span class="skill"><i class="devicon-java-plain colored"></i> Java</span>
+                  <span class="skill"><i class="devicon-kotlin-plain colored"></i> Kotlin</span>
+                  <span class="skill"><i class="devicon-python-plain colored"></i> Python</span>
+                  <span class="skill"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                  <span class="skill"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</span>
+               </div>
+            </div>
+
+            <div class="skills__group card-glass card-spotlight" data-reveal data-reveal-delay="100">
+               <h3 class="skills__group-title"><i class="ri-stack-line"></i> Frameworks &amp; Tech</h3>
+               <div class="skills__list">
+                  <span class="skill"><i class="devicon-react-original colored"></i> React.js</span>
+                  <span class="skill"><i class="devicon-spring-original colored"></i> Spring Boot</span>
+                  <span class="skill"><i class="devicon-android-plain colored"></i> Android</span>
+                  <span class="skill"><i class="ri-share-box-line"></i> REST APIs</span>
+                  <span class="skill"><i class="devicon-firebase-plain colored"></i> Firebase</span>
+                  <span class="skill"><i class="ri-rocket-2-line"></i> Expo</span>
+                  <span class="skill"><i class="devicon-git-plain colored"></i> Git/GitHub</span>
+               </div>
+            </div>
+
+            <div class="skills__group card-glass card-spotlight" data-reveal="right">
+               <h3 class="skills__group-title"><i class="ri-tools-line"></i> Tools</h3>
+               <div class="skills__list">
+                  <span class="skill"><i class="devicon-androidstudio-plain colored"></i> Android Studio</span>
+                  <span class="skill"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                  <span class="skill"><i class="devicon-postman-plain colored"></i> Postman</span>
+                  <span class="skill"><i class="devicon-docker-plain colored"></i> Docker</span>
+                  <span class="skill"><i class="devicon-linux-plain colored"></i> Linux</span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== EXPERIENCE ====================-->
+      <section class="experience section" id="experience">
+         <h2 class="section__title" data-reveal><span class="section__num">03.</span> Work <span class="grad">Experience</span></h2>
+         <p class="section__subtitle" data-reveal>Where I've been applying my skills.</p>
+
+         <div class="timeline container">
+            <article class="timeline__item" data-reveal="left">
+               <div class="timeline__dot"></div>
+               <div class="timeline__content card-glass card-spotlight">
+                  <div class="timeline__header">
+                     <h3 class="timeline__role">App Development Intern</h3>
+                     <span class="timeline__date">2026 — Present</span>
+                  </div>
+                  <h4 class="timeline__company"><i class="ri-building-line"></i> Statcon Electronics</h4>
+                  <ul class="timeline__points">
+                     <li>Building the <strong>RMS Mobile App</strong> for remote monitoring of power systems.</li>
+                     <li>Implemented <strong>OEM branding</strong> for white-labeled client builds.</li>
+                     <li>Shipped <strong>OTA updates</strong> using Expo EAS Update for instant releases.</li>
+                     <li>Handled <strong>Android &amp; iOS build configuration</strong> and store-ready packaging.</li>
+                  </ul>
+                  <div class="timeline__tags">
+                     <span class="tag">React Native</span>
+                     <span class="tag">Expo</span>
+                     <span class="tag">EAS Update</span>
+                     <span class="tag">Android</span>
+                     <span class="tag">iOS</span>
+                  </div>
+               </div>
+            </article>
+         </div>
+      </section>
+
+      <!--==================== PROJECTS ====================-->
+      <section class="projects section" id="projects">
+         <h2 class="section__title" data-reveal><span class="section__num">04.</span> Featured <span class="grad">Projects</span></h2>
+         <p class="section__subtitle" data-reveal>A selection of things I've built.</p>
+
+         <div class="projects__filters" data-reveal>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="systems">Systems</button>
+         </div>
+
+         <div class="projects__container container grid">
+            <!-- RMS Mobile App -->
+            <article class="project-card card-spotlight" data-category="mobile" data-reveal>
+               <div class="project-card__media project-card__media--gradient">
+                  <i class="ri-smartphone-line"></i>
+               </div>
+               <div class="project-card__body">
+                  <span class="project-card__type">Mobile App</span>
+                  <h3 class="project-card__title">RMS Mobile Application</h3>
+                  <p class="project-card__desc">
+                     Remote monitoring app for power systems with real-time data, OEM branding and
+                     OTA updates — built during my internship at Statcon Electronics.
+                  </p>
+                  <ul class="project-card__tags">
+                     <li>React Native</li><li>Expo</li><li>EAS Update</li><li>REST APIs</li>
+                  </ul>
+                  <div class="project-card__links">
+                     <span class="project-card__link project-card__link--muted"><i class="ri-lock-line"></i> Private</span>
+                  </div>
+               </div>
+            </article>
+
+            <!-- Email Scheduler -->
+            <article class="project-card card-spotlight" data-category="web" data-reveal data-reveal-delay="80">
+               <div class="project-card__media">
+                  <img src="src/img/Mail.png" alt="Email Scheduler Web App" loading="lazy" />
+               </div>
+               <div class="project-card__body">
+                  <span class="project-card__type">Web App</span>
+                  <h3 class="project-card__title">Email Scheduler</h3>
+                  <p class="project-card__desc">
+                     Automated email scheduling system with a custom queue and a reliable Spring Boot
+                     backend for efficient, on-time communication.
+                  </p>
+                  <ul class="project-card__tags">
+                     <li>Spring Boot</li><li>React</li><li>PostgreSQL</li><li>Java</li>
+                  </ul>
+                  <div class="project-card__links">
+                     <a href="https://github.com/YashSingholiya/Email-Scheduler-WOC" target="_blank" rel="noopener" class="project-card__link"><i class="ri-github-fill"></i> Code</a>
+                  </div>
+               </div>
+            </article>
+
+            <!-- Binary Tree Visualizer -->
+            <article class="project-card card-spotlight" data-category="web" data-reveal data-reveal-delay="160">
+               <div class="project-card__media">
+                  <img src="src/img/Tree.png" alt="Binary Tree Visualizer" loading="lazy" />
+               </div>
+               <div class="project-card__body">
+                  <span class="project-card__type">Web App</span>
+                  <h3 class="project-card__title">Binary Tree Visualizer</h3>
+                  <p class="project-card__desc">
+                     Interactive visualizer for Binary, BST, AVL and Red-Black Trees with smooth
+                     animations and intuitive controls.
+                  </p>
+                  <ul class="project-card__tags">
+                     <li>HTML</li><li>CSS</li><li>JavaScript</li>
+                  </ul>
+                  <div class="project-card__links">
+                     <a href="https://github.com/YashSingholiya/Binary_Tree_Visualizer" target="_blank" rel="noopener" class="project-card__link"><i class="ri-github-fill"></i> Code</a>
+                     <a href="https://binary-tree-visualizerr.vercel.app/" target="_blank" rel="noopener" class="project-card__link"><i class="ri-external-link-line"></i> Live Demo</a>
+                  </div>
+               </div>
+            </article>
+
+            <!-- Compiler -->
+            <article class="project-card card-spotlight" data-category="systems" data-reveal data-reveal-delay="240">
+               <div class="project-card__media">
+                  <img src="src/img/Syntaxia.png" alt="Syntaxia Compiler" loading="lazy" />
+               </div>
+               <div class="project-card__body">
+                  <span class="project-card__type">Systems</span>
+                  <h3 class="project-card__title">Syntaxia Compiler</h3>
+                  <p class="project-card__desc">
+                     A multi-stage C++ compiler with lexical, syntax and semantic analysis, token
+                     generation and RISC-V code emission.
+                  </p>
+                  <ul class="project-card__tags">
+                     <li>C++</li><li>Python</li><li>JavaScript</li>
+                  </ul>
+                  <div class="project-card__links">
+                     <a href="https://github.com/YashSingholiya/Syntaxia_Compiler" target="_blank" rel="noopener" class="project-card__link"><i class="ri-github-fill"></i> Code</a>
+                  </div>
+               </div>
+            </article>
+
+            <!-- HackSprint -->
+            <article class="project-card card-spotlight" data-category="web" data-reveal data-reveal-delay="80">
+               <div class="project-card__media">
+                  <img src="src/img/HackSprint.png" alt="HackSprint" loading="lazy" />
+               </div>
+               <div class="project-card__body">
+                  <span class="project-card__type">Web App</span>
+                  <h3 class="project-card__title">HackSprint</h3>
+                  <p class="project-card__desc">
+                     A challenge &amp; hackathon platform for IIT Jodhpur with automated workflows,
+                     event dashboards and optimized task processing.
+                  </p>
+                  <ul class="project-card__tags">
+                     <li>React</li><li>Node.js</li><li>MongoDB</li><li>Redis</li>
+                  </ul>
+                  <div class="project-card__links">
+                     <a href="https://github.com/YashSingholiya/HackSprint" target="_blank" rel="noopener" class="project-card__link"><i class="ri-github-fill"></i> Code</a>
+                     <a href="https://hack-sprint-iitj.vercel.app/" target="_blank" rel="noopener" class="project-card__link"><i class="ri-external-link-line"></i> Live Demo</a>
+                  </div>
+               </div>
+            </article>
+
+            <!-- Stroke Prediction -->
+            <article class="project-card card-spotlight" data-category="systems" data-reveal data-reveal-delay="160">
+               <div class="project-card__media">
+                  <img src="src/img/stroke.jpg" alt="Stroke Prediction" loading="lazy" />
+               </div>
+               <div class="project-card__body">
+                  <span class="project-card__type">ML</span>
+                  <h3 class="project-card__title">Stroke Prediction</h3>
+                  <p class="project-card__desc">
+                     Preprocessing, dimensionality reduction (PCA/LDA) and model evaluation to predict
+                     stroke risk from structured medical data.
+                  </p>
+                  <ul class="project-card__tags">
+                     <li>Python</li><li>Scikit-Learn</li><li>Pandas</li><li>NumPy</li>
+                  </ul>
+                  <div class="project-card__links">
+                     <a href="https://github.com/YashSingholiya/Stroke_Prediction" target="_blank" rel="noopener" class="project-card__link"><i class="ri-github-fill"></i> Code</a>
+                     <a href="https://yashsingholiya.github.io/Project_Page/" target="_blank" rel="noopener" class="project-card__link"><i class="ri-external-link-line"></i> Report</a>
+                  </div>
+               </div>
+            </article>
+         </div>
+      </section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+         <h2 class="section__title" data-reveal><span class="section__num">05.</span> Get In <span class="grad">Touch</span></h2>
+         <p class="section__subtitle" data-reveal>Have a project or opportunity in mind? Let's talk.</p>
+
+         <div class="contact__container container grid">
+            <div class="contact__info" data-reveal="left">
+               <h3 class="contact__info-title">Let's build something great together.</h3>
+               <p class="contact__info-text">
+                  I'm always open to discussing internships, freelance work or interesting ideas.
+                  Reach out and I'll get back to you soon.
+               </p>
+               <ul class="contact__details">
+                  <li class="contact__detail">
+                     <span class="contact__detail-icon"><i class="ri-mail-line"></i></span>
+                     <div>
+                        <span class="contact__detail-label">Email</span>
+                        <a href="mailto:yashsingholiyaiitj@gmail.com" class="contact__detail-value">yashsingholiyaiitj@gmail.com</a>
+                     </div>
+                  </li>
+                  <li class="contact__detail">
+                     <span class="contact__detail-icon"><i class="ri-linkedin-box-fill"></i></span>
+                     <div>
+                        <span class="contact__detail-label">LinkedIn</span>
+                        <a href="https://linkedin.com/in/yashsingholiya12" target="_blank" rel="noopener" class="contact__detail-value">in/yashsingholiya12</a>
+                     </div>
+                  </li>
+                  <li class="contact__detail">
+                     <span class="contact__detail-icon"><i class="ri-github-fill"></i></span>
+                     <div>
+                        <span class="contact__detail-label">GitHub</span>
+                        <a href="https://github.com/YashSingholiya" target="_blank" rel="noopener" class="contact__detail-value">@YashSingholiya</a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+
+            <form class="contact__form card-glass" id="contact-form" data-reveal="right">
+               <div class="contact__group">
+                  <div class="contact__field">
+                     <input type="text" name="user_name" id="user_name" required placeholder=" " class="contact__input" />
+                     <label for="user_name" class="contact__label">Your name</label>
+                  </div>
+                  <div class="contact__field">
+                     <input type="email" name="user_email" id="user_email" required placeholder=" " class="contact__input" />
+                     <label for="user_email" class="contact__label">Your email</label>
+                  </div>
+               </div>
+               <div class="contact__field">
+                  <textarea name="user_project" id="user_project" required placeholder=" " class="contact__input contact__textarea"></textarea>
+                  <label for="user_project" class="contact__label">Your message</label>
+               </div>
+               <button type="submit" class="button contact__button">
+                  <i class="ri-send-plane-fill"></i> Send Message
+               </button>
+               <p class="contact__message" id="contact-message"></p>
+            </form>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container">
+         <a href="#home" class="footer__logo">Yash <span>Singholiya</span></a>
+         <p class="footer__tagline">Android Developer · Software Engineer · Full Stack Developer</p>
+
+         <ul class="footer__social">
+            <li><a href="https://github.com/YashSingholiya" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-fill"></i></a></li>
+            <li><a href="https://linkedin.com/in/yashsingholiya12" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></li>
+            <li><a href="https://leetcode.com/u/YashSingholiya12/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="ri-code-s-slash-line"></i></a></li>
+            <li><a href="https://www.instagram.com/_yash1207/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-line"></i></a></li>
+         </ul>
+
+         <span class="footer__copy">© <span id="year"></span> Yash Singholiya. All rights reserved.</span>
+      </div>
+   </footer>
+
+   <!--========== BACK TO TOP ==========-->
+   <a href="#home" class="scrollup" id="scroll-up" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
+
+   <!--=============== EMAIL JS ===============-->
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="src/js/main.js"></script>
+</body>
 </html>
